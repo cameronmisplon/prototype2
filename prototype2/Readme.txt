@@ -2,7 +2,7 @@ Prerequisites:
 	-Docker version 20 or later
 Steps for running the prototype:
 	- Command to build the prototype - (docker build -t 'container_name' .)  . Any container name can be used as long as it remains consistent with running the prototype.
-	- Command for running the prototype - (docker run -it --mount type=bind,source="$(pwd)",target=/host --tmpfs /mnt/ramdisk -e "filename='filename'" -e "timeout='timeout'") capstone2. The recommended values for 'timeout' are 1,2 and 10 seconds for the easy, medium and hard problems respectively. The list of available filenames can be found at the end of the readme.
+	- Command for running the prototype - (docker run -it --mount type=bind,source="$(pwd)",target=/host --tmpfs /mnt/ramdisk -e "filename='filename'" -e "timeout='timeout'" 'container_name'). The recommended values for 'timeout' are 1,2 and 10 seconds for the easy, medium and hard problems respectively. The list of available filenames can be found at the end of the readme.
 	- The output of the prototype is stored in "output.txt" the working directory that the docker was run from.
 Output file format:
 	- The output is contained in a text file named "output.txt". The text file has 1000 entries representing each run of carlsat which was made.
